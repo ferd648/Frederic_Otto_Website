@@ -1,0 +1,158 @@
+body {
+    width: 100%;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 1px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header .logo {
+    color: #434343;
+    height: 50px;
+    line-height: 50px;
+    font-size: 24px;
+    float: left;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+header nav {
+    float: right;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.5em;
+    font-weight: 800;
+    margin-top: 0px;
+    z-index: 10;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: #434343;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    color: #767676;
+}
+
+header nav ul li a.active {
+    border: 1px solid #434343;
+}
+
+.menu-toggle {
+    color: #000;
+    float: right;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    padding-right: 10px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container {
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+    float: left;
+    position: relative;
+}
+
+.containre-fluid {
+    overflow: hidden;
+}
+
+.column {
+    flex: 25%;
+    max-width: 33.3%;
+    padding: 0 9px;
+}
+
+.column img {
+    margin-top: 17px;
+    vertical-align: middle;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.column img:hover {
+    opacity: .7;
+    transition: .5;
+}
+
+@media screen and (max-width: 920px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .inner-container {
+        margin-top: 100px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    header nav {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(51, 51, 51, 0.99);
+        left: -100%;
+        transition: 0.5s;
+    }
+    header nav.active {
+        left: 0;
+    }
+    header nav ul {
+        display: block;
+        text-align: center;
+    }
+    header nav ul li a {
+        margin-right: 00px;
+        color: #fff;
+    }
+}
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
+h1 {
+    margin-top: 2em;
+    text-align: center;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+    color: #434343;
+    font-size: 50px;
+}
+
+p {
+    margin-left: 10.5%;
+    margin-right: 10.5%;
+    margin-top: 1em;
+    text-align: left;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    color: #434343;
+    font-size: 20px;
+}
